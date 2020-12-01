@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
+    "build:prod": "ng build --prod --baseHref=\"https://wonderlaw1.github.io/travis-ci-tutorial/\"",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

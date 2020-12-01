@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - 12.18.4
+cache: npm
+
+install:
+  npm install
+
+script:
+  - npm run lint
+  - npm run test:ci
+  - npm run build:prod
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local_dir: dist/travis-ci-tutorial
+  on:
+    branch: master
